@@ -1,0 +1,121 @@
+$header-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+$white: white;
+$black: black;
+$top-height: 52px;
+$primary :#09a6e0;
+$gray : #bbb;
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+}
+.header {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    color :$white;
+    font-size: 24px;
+    font-weight: 600;
+	padding: 12px;
+	background: $header-color;
+	flex-direction: column;
+	span:nth-child(2) {
+		font-size: 12px;
+	}
+}
+
+.full-width {
+	width: 100%;
+}
+.full-height {
+	height: 100%;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	margin-top: 20px;
+}
+.score-board {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+	span:first-child {
+		margin-right: 1em;
+	}
+	span:nth-child(2) {
+		height: 44px;
+		width: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid;
+	}
+}
+
+.data-table {
+	margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2rem;
+	.Rtable-row {
+		display: flex;
+		.dot {
+			height: 15px;
+    		width: 15px;
+    		background-color: $gray;
+    		border-radius: 50%;
+			display: inline-block;
+			padding: 0.5em;
+			margin: 0.5em;
+			cursor: pointer;
+			&:hover {
+				background-color: $primary;
+			}
+		}
+		
+}
+.Rtable-body {
+		max-height: calc(100vh - #{$top-height});
+		overflow: auto;
+}
+.Rtable-row--head {
+		height: 82px;
+}
+
+}
+
+.btn {
+	overflow: visible;
+	margin: 20px;
+	padding: 10px;
+	border: 2px;
+	border-radius: 6px;
+	width: 100px;
+	cursor: pointer;
+}
+.primary {
+	background: $primary;
+	color: white;
+}
+.secondary {
+	background: gray;
+	color: white;
+}
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hr {
+	width: 100%;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+	border: 1px solid $black;
+}
