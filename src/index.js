@@ -1,14 +1,9 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-   
     obj.renderGrid();
-    //obj.generateRandomCircle();
-    // op.updateRoom();
-    // op.renderPath();
-    // document.addEventListener('keydown',op.move.bind(op));
+    obj.generateRandomCircle();
 });
 
 function DataTable() {
-
     this.gridSize = { width: 6, height: 6 };
     this.score = 0;
     this.randomId;
@@ -29,14 +24,13 @@ function DataTable() {
         }
     }
     this.findScore = (event) => {
+        debugger;
         if(event.target.id == this.randomId) { 
             this.score++; 
             this.generateRandomCircle()
         }
         else this.score--;
         document.getElementById('score').textContent = this.score;
-
-
     }
     this.generateRandomCircle = () => {
         this.randomId = Math.floor(Math.random() * this.gridSize.height) + '' + Math.floor(Math.random() * this.gridSize.width);
